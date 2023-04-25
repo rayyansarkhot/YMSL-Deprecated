@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YMSL Stat Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+    </style>
   </head>
   
 
@@ -14,6 +17,43 @@
     <header>Young Muslims Summer League Stat Tracker</header>
     
     <script src="./js/index.js"></script>
+    
+    <!-- Div holds all actions user's can do to query stats in database. -->
+    <div class="statActionsDIV">
+
+      <!-- Holds function to get individual player's stats. -->
+      <div class="searchByPlayer">
+
+        <section class="dropdown">
+        
+          <label for="player">PLAYER - </label>
+          <select name="player" id="player">
+            <option value=""></option>
+          </select>
+        
+        </section>
+
+        <button id="searchByPlayerBTN">SEARCH</button>
+
+      </div>
+
+      <!-- Holds function to get a team's stats. -->
+      <div class="searchByTeam">
+
+        <section class="dropdown">
+
+          <label for="team">TEAM - </label>
+          <select name="TEAM" id="TEAM">
+            <option value=""></option>
+          </select>
+
+        </section>
+
+        <button id="searchByTeamBTN">SEARCH</button>
+
+      </div>
+
+    </div>
 
   </body>
 
