@@ -9,7 +9,7 @@ const pool = new Pool({
 });
 
 // Method selects names from players table in ball database.
-const getUsers = (request, response) => {
+const getPlayers = (request, response) => {
     pool.query('SELECT name FROM players ORDER BY id', (error, results) => {
       if (error) 
         throw error;
@@ -29,5 +29,22 @@ const getTeams = (request, response) => {
   })
 };
 
+// Function queries database for a specific player's info.
+const getPerson = (request, response) => {
+  
+  let all;
+  const id = parseInt(request.params.id);
 
-module.exports = {getUsers, getTeams};
+  // Super long query gathers singular player's total stats across games.
+  pool.query('SELECT * FROM game1stats WHERE player_id = $1 UNION ALL SELECT * FROM game2stats WHERE player_id = $1 UNION ALL SELECT * FROM game3stats WHERE player_id = $1 UNION ALL SELECT * FROM game4stats WHERE player_id = $1 UNION ALL SELECT * FROM game5stats WHERE player_id = $1 UNION ALL SELECT * FROM game6stats WHERE player_id = $1 UNION ALL SELECT * FROM game7stats WHERE player_id = $1 UNION ALL SELECT * FROM game8stats WHERE player_id = $1 UNION ALL SELECT * FROM game9stats WHERE player_id = $1 UNION ALL SELECT * FROM game10stats WHERE player_id = $1 UNION ALL SELECT * FROM game11stats WHERE player_id = $1 UNION ALL SELECT * FROM game12stats WHERE player_id = $1', [id], (error, results) => {
+    if (error) {
+      throw error;
+    }
+
+    response.status(200).json(results.rows);
+
+  });
+
+}  
+
+module.exports = {getPlayers, getTeams, getPerson};

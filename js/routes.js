@@ -9,9 +9,13 @@ var cors = require('cors');
 app.use(cors());
 
 // Route asks for players in database to display on site.
-app.get('/', db.getUsers);
+app.get('/players/', db.getPlayers);
 
 // Route asks for teams in database to display on site.
-app.get('/teams/', db.getTeams)
+app.get('/teams/', db.getTeams);
+
+// Route asks for a player's information in database to display on site.
+app.get('/players/:id', db.getPerson);
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
