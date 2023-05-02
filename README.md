@@ -3,6 +3,8 @@
 ## Description
 I am a part of administration for my local Muslim basketball league, but they take and display player data with pen and paper, as well as Google Sheets. This website was created to digitize the recording of this league's players' game data and display it in a way pretty way. Essentially, it is a statistics tracker for a basketball league.
 
+![Recording 2023-05-02 093015](https://user-images.githubusercontent.com/97762157/235682750-58246104-5ec9-4b7c-a499-1ba3698924e6.gif)
+
 ## Current Features
 - Team and Player names are available in both dropdowns.
 - Last season's data for 3 players can be accessed through the dropdown.
@@ -36,3 +38,6 @@ I am a part of administration for my local Muslim basketball league, but they ta
 **PostgreSQL/Postbird**
 - A postgreSQL database is setup locally to persistenly store league data.
 - Postbird and Windows CLI were used to create this database and test requests to it.
+
+![Screenshot 2023-04-25 150344](https://user-images.githubusercontent.com/97762157/235682071-3ca7d713-b77c-4685-ba81-a2fddc95b182.png)
+Made with www.dbdesigner.net
