@@ -17,5 +17,8 @@ app.get('/teams/', db.getTeams);
 // Route asks for a player's information in database to display on site.
 app.get('/players/:id', db.getPerson);
 
+// Route asks for players on a team's information.
+app.get('/teaminfo/', db.getPlayerInfo);
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
